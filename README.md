@@ -31,3 +31,7 @@ node_modules/.bin/sequelize db:migrate:undo
 node_modules/.bin/sequelize model:create --name Users --attributes email:string,password:string,firstname:string,lastname:string
 node_modules/.bin/sequelize seed:create --name init-role-data
 ```
+
+## Reference
+https://medium.com/@eth3rnit3/sequelize-relationships-ultimate-guide-f26801a75554
+https://medium.com/@victorsteven/restful-api-with-nodejs-express-postgresql-sequelize-travis-mocha-coveralls-and-code-climate-f28715f7a014

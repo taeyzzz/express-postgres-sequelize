@@ -29,4 +29,5 @@ node_modules/.bin/sequelize db:drop
 node_modules/.bin/sequelize db:migrate
 node_modules/.bin/sequelize db:migrate:undo
 node_modules/.bin/sequelize model:create --name Users --attributes email:string,password:string,firstname:string,lastname:string
+node_modules/.bin/sequelize seed:create --name init-role-data
 ```

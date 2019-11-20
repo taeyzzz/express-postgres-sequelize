@@ -8,15 +8,19 @@ docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=postgres -d postgre
 ```bash
 yarn or npm install
 ```
-4. Create DB with command below
+4. Install sequelize cli globally
+```bash
+npm install -g sequelize-cli
+```
+5. Create DB with command below
 ```bash
 npm run db:create
 ```
-5. Run migration files with command below
+6. Run migration files with command below
 ```bash
 npm run db:migrate
 ```
-6. Run express server with command below
+7. Run express server with command below
 ```bash
 npm start
 ```

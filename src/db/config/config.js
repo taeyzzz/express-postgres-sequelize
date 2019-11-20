@@ -1,28 +1,29 @@
-require('dotenv').config();
+const dev_environment = require("../../../ecosystem.config").apps[0].env
+const prod_environment = require("../../../ecosystem.config").apps[0].env_production
 
 module.exports = {
   "development": {
-    "username": "postgres",
-    "password": "postgres",
-    "database": "express-sequelize-dev",
-    "host": "127.0.0.1",
-    "dialect": "postgres",
+    "username": dev_environment.DB_USERNAME,
+    "password": dev_environment.DB_PASSWORD,
+    "database": dev_environment.DB_NAME,
+    "host": dev_environment.HOST_NAME,
+    "dialect": dev_environment.DIALECT,
     "operatorsAliases": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
+    "username": dev_environment.DB_USERNAME,
+    "password": dev_environment.DB_PASSWORD,
+    "database": dev_environment.DB_NAME,
+    "host": dev_environment.HOST_NAME,
+    "dialect": dev_environment.DIALECT,
     "operatorsAliases": false
   },
   "production": {
-    "username": process.env.DB_USERNAME,
-    "password": process.env.DB_PASSWORD,
-    "database": process.env.DB_NAME,
-    "host": process.env.HOST_NAME,
-    "dialect": process.env.DIALECT,
+    "username": prod_environment.DB_USERNAME,
+    "password": prod_environment.DB_PASSWORD,
+    "database": prod_environment.DB_NAME,
+    "host": prod_environment.HOST_NAME,
+    "dialect": prod_environment.DIALECT,
     "operatorsAliases": false
   }
 }
